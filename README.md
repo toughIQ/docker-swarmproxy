@@ -20,6 +20,6 @@ __Now we start our proxy, one one each worker node:__
 We create our `myproxy`service, connect it to our `myswarmnet` network, use `global` mode to assign one instance per node and export port `80` to port `80`. We also assign two environment variables to tell the proxy, where to route the traffic: 
 `DEST=mywebapp` and `DESTPORT=80`
 
-__Default Environment variables__
+__Default Environment variables:__
 They might be overwritten if needed:
 `SRC=0.0.0.0` and `SRCPORT=80`
