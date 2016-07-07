@@ -12,7 +12,7 @@ We create a new network called `myswarmnet` using the `overlay` network driver.
 __Fire up our webapp workers with a demo image (simple PHP7 container listening on port 80):__
 `docker service create --name mywebapp --network myswarmnet --replicas 10 toughiq/phptest`
 
-We create a new service called `mywebapp`, connect it to our network `myswarmnet` and start with 10 replicas.
+We create a new service called `mywebapp`, connect it to our network `myswarmnet` and start with `10` replicas.
 
 __Now we start our proxy, one one each worker node:__
 `docker service create --name myproxy --network myswarmnet --mode global -p 80:80 --env DEST=mywebapp --env DESTPORT=80 toughiq/swarmproxy`
