@@ -4,7 +4,7 @@ Docker Image used for Swarm > 1.12. Routes traffic from Ingress Mesh to scaled r
 ## Example
 We assume we have a webapp with multiple instances running. For performance reasons we need more instances than we have worker nodes, so we cannot bind one webapp instance on each node on port 80.
 
-###We need our own overlay network with the swarm:
+_We need our own overlay network with the swarm:_
 `docker network create --driver overlay myswarmnet`
 
 We create a new network called `myswarmnet` using the `overlay` network driver.
